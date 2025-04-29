@@ -30,7 +30,7 @@ An AVD was configured in Android Studio with the following settings:
 
 Termux provides a Linux-like environment within Android.
 
-* **Source:** It's recommended to install Termux from F-Droid or GitHub releases.
+* **Source:** It's recommended to install Termux from F-Droid or the [Termux GitHub releases page](https://github.com/termux/termux-app/releases).
 * **APK Version:** The specific APK for the `arm64-v8a` architecture was downloaded and installed (`termux-app_v0.119.0-beta.2+apt-android-7-github-debug_arm64-v8a.apk`).
 
 ## 3. Ollama Installation in Termux
@@ -45,7 +45,11 @@ The standard Linux installation script was run:
 curl -fsSL [https://ollama.com/install.sh](https://ollama.com/install.sh) | sh
 ```
 
+However, root access is generally not available on Google APIs/Play AVD images, making this script unsuitable for this environment.
+
 ### Attempt 2: Termux Package Manager (No Root Required)
+
+Ollama was successfully installed using Termux's package manager via the Termux User Repository (TUR). This method does not require root.
 
 ```bash
 # Update Termux packages
